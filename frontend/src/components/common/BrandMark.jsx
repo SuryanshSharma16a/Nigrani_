@@ -1,6 +1,5 @@
 // File: src/components/common/BrandMark.jsx
 import React from 'react';
-import { Building2 } from 'lucide-react';
 import { COLOR_TOKENS } from '../../config/constants';
 
 export function BrandMark({ size = 36, className = '' }) {
@@ -10,10 +9,14 @@ export function BrandMark({ size = 36, className = '' }) {
       style={{
         width: size,
         height: size,
-        background: `linear-gradient(135deg, ${COLOR_TOKENS.indigo}, ${COLOR_TOKENS.indigoLight})`,
+        backgroundColor: COLOR_TOKENS.bg,
       }}
     >
-      <Building2 size={size * 0.52} color="#ffffff" strokeWidth={2.2} />
+      <img 
+        src="/logo.png" 
+        alt="Nigrani Logo" 
+        style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: 'inherit' }} 
+      />
     </div>
   );
 }
